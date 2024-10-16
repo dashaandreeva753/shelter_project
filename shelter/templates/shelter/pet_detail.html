@@ -1,0 +1,21 @@
+{% extends 'shelter/base.html' %}
+{% block content %}
+ <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h1 class="featurette-heading fw-normal lh-1">{{ cat.name }}</h1>
+          <div class="mt-5">
+              <strong>Возраст: </strong>{{ cat.age }}<br>
+              <strong>Пол: </strong>{{ cat.animal }}<br>
+              <strong>Здоровье: </strong>{{ cat.health }}<br>
+              <strong>Описание: </strong>{{ cat.description }}<br>
+          </div>
+      </div>
+      <div class="col-md-5" >
+        <img height="400" src="/media/{{ cat.image }}" alt="Кот">
+      </div>
+    </div>
+ <hr class="featurette-divider">
+
+{% endblock %}
